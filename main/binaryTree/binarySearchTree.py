@@ -90,13 +90,15 @@ def build_tree(elements):
         root.add_child(elements[i])
     return root
 
+
 if __name__ == '__main__':
     numbers = [15,12,7,14,27,20,23,88 ]
-    numbers_tree = build_tree(numbers)
-    print("Input numbers:",numbers)
-    print("Min:",numbers_tree.find_min())
-    print("Max:",numbers_tree.find_max())
-    print("Sum:", numbers_tree.calculate_sum())
-    print("In order traversal:", numbers_tree.in_order_traversal())
-    print("Pre order traversal:", numbers_tree.pre_order_traversal())
-    print("Post order traversal:", numbers_tree.post_order_traversal())
+    number_tree = build_tree(numbers)
+    print('In order Traversal : ',number_tree.in_order_traversal())
+    print('Pre order Traversal : ', number_tree.pre_order_traversal())
+    print('Post order Traversal : ', number_tree.post_order_traversal())
+    print('Is 33 exists in BST : ',number_tree.search(33))
+    print('Is 33 exists in BST : ', number_tree.search(23))
+    print('Max value : ', number_tree.find_max())
+    print('Min value : ', number_tree.find_min())
+    print('Value Sum : ',number_tree.calculate_sum())
